@@ -4,7 +4,7 @@ public class Persona {
     private float peso,altura;
     private Sexo sexo;
 
-    private enum Sexo{
+    public enum Sexo{
         H,M
     }
 
@@ -14,6 +14,7 @@ public class Persona {
         peso = 0;
         altura = 0;
         sexo = Sexo.H;
+        generarDNI();
 
     }
 
@@ -23,15 +24,18 @@ public class Persona {
         this.sexo = sexo;
         peso = 0;
         altura = 0;
+        generarDNI();
+
     }
 
-    public Persona(String nombre, String dni, int edad, float peso, float altura, Sexo sexo) {
+    public Persona(String nombre, int edad, float peso, float altura, Sexo sexo) {
         this.nombre = nombre;
-        this.dni = dni;
         this.edad = edad;
         this.peso = peso;
         this.altura = altura;
         this.sexo = sexo;
+        generarDNI();
+
     }
 
     public int calcularIMC(){

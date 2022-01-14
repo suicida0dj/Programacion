@@ -6,6 +6,11 @@ public class Input {
         System.out.println(message);
         return sc.nextLine();
     }
+    public static char getChar(String message){
+        Scanner sc = new Scanner(System.in);
+        System.out.println(message);
+        return sc.nextLine().charAt(0);
+    }
     public static int getInteger(String message){
         Scanner sc = new Scanner(System.in);
         System.out.println(message);
